@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+{% block con %}
+<h1>
+Home 
+</h1>
+<h3>
+{{ text }}  <br>
+here is some list:
+</h3>
+<p>
+	<ol>
+		{%for item in m_list%}
+		{%if item == 332%}
+		<li>{{item | add:22}}*</li>
+		{%elif item == 22%}
+		<li>{{item}}=22</li>
+		{%else%}
+		<li> {{item}}</li>
+		{%endif%}
+		{%endfor%}
+	</ol>
+</p>
+{% endblock %}

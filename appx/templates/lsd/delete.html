@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+{%block con%}
+<form action="." method="POST">{%csrf_token%}
+<h3>Do u really want to delete this item :{{ob.name}} ?</h3>
+<p><input type="submit" value="Yes">
+<a href="../">Cancel</a></p>
+</form>
+{%endblock%}

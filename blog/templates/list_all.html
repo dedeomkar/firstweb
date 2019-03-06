@@ -1,0 +1,8 @@
+{%extends "bbase.html"%}
+{%block cont%}
+<ul>
+{%for item in object_list%}
+<a href="{{item.get_absolute_url}}"><li>{{item.name}}</li></a>
+{%endfor%}
+</ul>
+{%endblock%}

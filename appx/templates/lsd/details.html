@@ -1,0 +1,8 @@
+{%extends "base.html" %}
+
+{%block con%}
+<h3>{{ob.name}}</h3>
+<h5>{{ob.summary}}  , {{ob.nos}}</h5>
+<a href="{{ob.get_url_delete}}"><p>Delete this lsd</p></a> 
+<a href="{{ob.get_url}}add">Add to Cart</a> 
+{%endblock%}

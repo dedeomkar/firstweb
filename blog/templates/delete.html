@@ -1,0 +1,8 @@
+{%extends "bbase.html"%}
+{%block cont%}
+<form action="." method="POST">{%csrf_token%}
+<p>Do you really want to delete<h3>{{object.name}}?</h3> </p>
+<input type="submit" name="Yes"><br>
+</form>
+<a href="../../">back</a>  
+{%endblock%}

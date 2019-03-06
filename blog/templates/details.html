@@ -1,0 +1,9 @@
+{%extends "bbase.html"%}
+{%block cont%}
+<ul><h4><li>{{object.name}}</li></h4> 
+<ul><li>{{object.cate}}</li>  
+	<li>{{object.featu}}</li> 
+</ul>
+<a href="{{object.get_url_delete}}">Delete</a>
+</ul> 
+{%endblock%}

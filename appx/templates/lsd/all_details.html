@@ -1,0 +1,13 @@
+{%extends "base.html" %}
+
+{%block con%}
+<h4>All Lsd s :
+	<hr>
+</h4><h5>
+{%for item in ob%}
+	<ul>
+		<a href="{{item.get_url}}">{{item.id}} - {{item.name}}</a>
+	</ul>
+{%endfor%} 
+</h5>
+{%endblock%}	 
