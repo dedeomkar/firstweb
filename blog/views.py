@@ -41,7 +41,7 @@ class regis(View):
 					login (request,user1)
 					return redirect("../../../")
 		return render(request,self.template_name, {'form' : uform}) 
-#changed
+ 
 def login_v (request): 
 	if not request.user.is_authenticated: 
 		form = uform(request.POST) 
@@ -61,8 +61,7 @@ def login_v (request):
 		return render(request,"add.html", {'form':form})
 	return redirect ("../../../")
 
-def logout_v (request):
-	print("ADww")
+def logout_v (request): 
 	logout(request)
 	return redirect ("../../../")
  

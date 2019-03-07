@@ -1,21 +1,11 @@
-<nav>
-<ul>
-	{%if request.user.is_authenticated%} 
-	<h3>{{request.user}}<a href="{% url 'blog:logout'%}">  logout</a></h3>
-	{%else%}
-	<h8>You are not logged in </h8> please <a href="{% url 'blog:login'%}">login</a>
-	{%endif%}
-	<hr>
-	<a href="{%url 'home'%}"><li>home</li></a>
-	<a href="{%url 'about'%}"><li>about</li></a>
-	<a href="{%url 'lsd:all_details'%}"><li>lsd details</li></a>
-	<a href="{%url 'lsd:create'%}"><li>lsd add</li></a>
-	<a href="{%url 'blog:list'%}"><li>blog</li></a>
-	<a href="{%url 'lsd:cart'%}"><li>go to cart</li></a>
-	
-	<form action="{%url 'search'%}" method="GET">
-		<input type="text" name="search"/><br>
-		<button type="submit">Search</button>
-	</form>
-</ul>
-</nav> 
+
+<nav class="nav-bar pt-2 pl-5">
+	<h4>
+	 <a href="{%url 'home'%}">Home</a>&nbsp&nbsp
+	 <a href="{%url 'about'%}">About</a>&nbsp&nbsp 
+	 <a href="{%url 'lsd:all_details'%}">All Lsd</a>&nbsp&nbsp 
+	 <a href="{%url 'lsd:create'%}">Add Lsd</a>&nbsp&nbsp 
+	 <a href="{%url 'blog:list'%}">Blog</a>&nbsp&nbsp 
+	 <a href="{%url 'lsd:cart'%}">Cart</a>&nbsp&nbsp
+	 </h4> 
+</nav>  

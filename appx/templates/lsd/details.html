@@ -1,8 +1,14 @@
 {%extends "base.html" %}
 
 {%block con%}
-<h3>{{ob.name}}</h3>
+<div class="container"> 
+<br><br><h3>{{ob.name}}</h3><br>
 <h5>{{ob.summary}}  , {{ob.nos}}</h5>
-<a href="{{ob.get_url_delete}}"><p>Delete this lsd</p></a> 
-<a href="{{ob.get_url}}add">Add to Cart</a> 
+<hr>
+<div class ="col">
+<button class="btn-danger"><a href="{{ob.get_url_delete}}" style="color: white">Delete this lsd</a></button>
+<br><br> 
+<button class="btn-secondary"><a href="{{ob.get_url}}add"  style="color: white">Add to Cart</a> </button>
+</div>
+</div>
 {%endblock%}

@@ -8,7 +8,7 @@ urlpatterns =[
 	path ("<int:pk>/ud",cupdate_v.as_view(), name = "update"),
 	path ("<int:pk>/delete/", cdelete_v.as_view(),name ="delete"),
 	path ("add/",cmform_v.as_view(), name ="add"),
-	path ("regis/",regis.as_view()),
+	path ("regis/",regis.as_view(),name="regis"),
 	path ("login/",login_v,name= "login"),
 	path ("logout/",logout_v,name= "logout"),
 ]

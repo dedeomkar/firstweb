@@ -1,10 +1,15 @@
 {%extends 'base.html'%}
 {%block con%} 
-<h3>Cart :</h3>
+<div class="container"> 
+<h2>Cart :</h2>
 <hr>
 <ul>
-{%for item in ob%}
-<li><a href="{{item.get_url}}">{{item.name}}</a> <a href="{{item.get_url}}del">remove</a></li>
+{%for item in ob%} 
+<br>
+<li><a href="{{item.get_url}}">{{item.name}}</a> 
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="btn-danger"><a href="{{item.get_url}}del" style="color: white">remove</a></button></li> 
 {%endfor%}
 </ul>
+</div>
 {%endblock%}

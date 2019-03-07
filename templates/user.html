@@ -1,0 +1,20 @@
+<div class="row"> 
+<div class = "col-7 ml-auto pt-3" >	 
+	<form action="{%url 'search'%}" method="GET">
+		<input type="text" name="search"/> 
+		<button type="submit" class="btn-primary">&nbspSearch&nbsp</button>
+	</form>  
+</div>
+<div class="col-3 mr-auto pt-2">
+	{%if request.user.is_authenticated%} 
+	<div class="row ">
+	<h4>&nbsp&nbsp{{request.user}} ^ </h4> &nbsp<a href="{% url 'blog:logout'%}">logout</a>
+	</div>
+	{%else%}
+	<div class="row ml-auto mt-3">
+    <a href="{% url 'blog:login'%}"> LogIn</a> &nbsp&nbsp&nbsp&nbsp
+    <a href="{% url 'blog:regis'%}"> SignUp</a> 
+	</div>
+	{%endif%}
+</div> 
+</div>
